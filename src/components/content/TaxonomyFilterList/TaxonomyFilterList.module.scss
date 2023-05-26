@@ -1,0 +1,15 @@
+@use '../../../styles/global/' as global;
+
+.taxonomyFilterList {
+  &__heading {
+    font-size: 2rem;
+    color: global.$white;
+  }
+
+  &__list {
+    &Item {
+      font-size: 1.4rem;
+      color: global.$white;
+    }
+  }
+}

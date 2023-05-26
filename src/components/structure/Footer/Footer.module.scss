@@ -1,0 +1,47 @@
+@use '../../../styles/global/' as global;
+
+.footer {
+  &__content {
+    position: relative;
+    padding: 2.9rem 0 7.2rem 0;
+
+    @include global.media-up(xl) {
+      padding: 4.3rem 0 14.4rem 0;
+    }
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(90.75deg, rgba(255, 0, 168, 0.6) 2.97%, rgba(189, 0, 255, 0.6) 55.95%);
+      position: absolute;
+      display: inline-block;
+      top: 0;
+
+      @include global.media-up(xl) {
+        width: 570px;
+      }
+    }
+
+    p {
+      color: global.$white;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+
+      @include global.media-up(xl) {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+      }
+
+      @include global.media-up(xxl) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
+
+      a {}
+    }
+  }
+}

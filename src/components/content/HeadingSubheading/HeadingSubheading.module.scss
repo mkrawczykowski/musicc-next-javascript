@@ -1,0 +1,37 @@
+@use '../../../styles/global/' as global;
+
+.headingSubheading {
+  &__mainHeading {
+    font-family: 'Poppins';
+    display: inline-block;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 4.6rem;
+    background: linear-gradient(90.75deg, rgba(255, 0, 168, 0.6) 2.97%, rgba(189, 0, 255, 0.6) 55.95%);
+    background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    text-fill-color: transparent;
+    margin-bottom: 0.8rem;
+
+    @include global.media-up(xl) {
+      font-size: 4.8rem;
+      line-height: 7.2rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &__secondaryHeading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: global.$white;
+
+    @include global.media-up(xl) {
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+    }
+  }
+}
