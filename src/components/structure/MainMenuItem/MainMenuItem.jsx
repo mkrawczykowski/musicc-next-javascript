@@ -3,7 +3,7 @@ import Link from 'next/link';
 import MegaMenuPanel from '../MegaMenuPanel/MegaMenuPanel';
 
 const MainMenuItem = ({ label, url, subMenuData }) => {
-  const ref = useRef < HTMLAnchorElement > (null);
+  const ref = useRef(null);
   const classes = subMenuData ? 'hasSubMenu' : undefined;
 
   const handleLinkClick = () => {
