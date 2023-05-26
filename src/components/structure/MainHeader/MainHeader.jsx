@@ -5,9 +5,9 @@ import Logo from '../Logo/Logo';
 import Search from '../Search/Search';
 import MainMenu from '../MainMenu/MainMenu';
 import Hamburger from '../Hamburger/Hamburger';
-import Context from '../Store/Store';
 
 const MainHeader = () => {
+
     return (
         <div className={styles.mainHeader}>
             <Container>
