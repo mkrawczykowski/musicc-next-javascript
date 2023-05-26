@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, createContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
 export const Context = createContext(null);
 
@@ -20,18 +20,6 @@ const Store = ({ children }) => {
 }
 
 export default Store;
-
-
-
-// // interface initialStateInterface {
-// //     activeMegaMenu: number[],
-// //     mobileMenuActive: boolean
-// // }
-
-// interface ContextType {
-//     activeMegaMenu: number[];
-//     mobileMenuActive: boolean;
-// };
 
 // const initialState = {
 //     activeMegaMenu: [1, 2],

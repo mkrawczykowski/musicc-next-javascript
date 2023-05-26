@@ -44,12 +44,6 @@ const Col = ({ children, classes }) => {
 //     )
 // }
 
-// interface ColProps {
-//     children?: ReactNode,
-//     classes: string
-//     className?: string;
-// }
-
 // const Col = ({ children, classes, innerHTML }) => {
 //     const splitClasses = classes.split(' ');
 
