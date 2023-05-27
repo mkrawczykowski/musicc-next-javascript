@@ -1,1 +1,8 @@
-.hamburger {}
+@use '../../../styles/global/' as global;
+
+.hamburger {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  background-color: global.$white;
+}
