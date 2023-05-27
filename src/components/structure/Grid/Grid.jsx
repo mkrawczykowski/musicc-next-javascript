@@ -20,7 +20,6 @@ const generateClassesFromProps = (classes) => {
 }
 
 const Container = ({ children, classes }) => {
-
     return (
         <div className={[styles.container, generateClassesFromProps(classes)].join(' ')}>
             {children}

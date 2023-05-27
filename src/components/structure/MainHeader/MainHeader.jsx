@@ -7,7 +7,6 @@ import MainMenu from '../MainMenu/MainMenu';
 import Hamburger from '../Hamburger/Hamburger';
 
 const MainHeader = () => {
-
     return (
         <div className={styles.mainHeader} classes={'containerHeaderColumns'}>
             <Container>
