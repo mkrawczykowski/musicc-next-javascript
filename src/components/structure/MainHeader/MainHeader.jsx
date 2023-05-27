@@ -9,12 +9,12 @@ import Hamburger from '../Hamburger/Hamburger';
 const MainHeader = () => {
 
     return (
-        <div className={styles.mainHeader}>
+        <div className={styles.mainHeader} classes={'containerHeaderColumns'}>
             <Container>
-                <Logo />
-                <MainMenu />
                 <Search />
+                <Logo />
                 <Hamburger />
+                <MainMenu />
             </Container>
         </div>
     )

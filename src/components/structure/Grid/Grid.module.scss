@@ -35,10 +35,27 @@ $columns: (
   @include global.media-up(xl) {
     padding: 0 2rem;
   }
+}
 
-  &TwoColumns {
-    grid-template-columns: 21.9rem 93.7rem;
-    grid-template-rows: auto;
+.row {
+  &HeaderColumns {
+    grid-template-columns: auto 2rem;
+    grid-template-rows: auto auto auto;
+
+    @include global.media-up(xxl) {
+      grid-template-columns: 21.9rem 93.7rem;
+      grid-template-rows: auto;
+    }
+  }
+
+  &FirstColumnSidebar {
+    grid-template-columns: auto 2rem;
+    grid-template-rows: auto auto auto;
+
+    @include global.media-up(xxl) {
+      grid-template-columns: 21.9rem 93.7rem;
+      grid-template-rows: auto;
+    }
   }
 
   &SecondColumnNarrow {
@@ -72,78 +89,5 @@ $columns: (
 
   }
 
-  // width: 100%;
-  // padding: 0 calc($containerHorizontalPadding / 2) * 1rem;
-  // margin: 0 auto;
-  // background-color: aqua;
 
-  // @each $breakpointName,
-  // $breakpointValue in variables.$breakpoints {
-  //   $breakpointValuePx: $breakpointValue * 1px;
-  //   $containerWidthForBreakpoint: map.get($containerWidths, $breakpointName);
-
-  //   @media screen and (min-width:#{$breakpointValuePx}) {
-  //     max-width: calc(($containerWidthForBreakpoint * 1rem) + $gap);
-  //   }
-  // }
-
-  // .row {
-  //   display: flex;
-  //   margin-left: calc($gap / 2 * -1);
-  //   margin-right: calc($gap / 2 * -1);
-  //   justify-content: flex-start;
-  //   align-items: flex-start;
-  //   flex-wrap: wrap;
-
-  //   .col {
-  //     padding-right: calc($gap / 2);
-  //     padding-left: calc($gap / 2);
-  //     width: 100%;
-  //   }
-
-  //   @each $breakpointName,
-  //   $breakpointValue in variables.$breakpoints {
-  //     $breakpointsIndex: index(variables.$breakpoints, $breakpointName $breakpointValue);
-  //     $breakpointValuePx: $breakpointValue * 1px;
-
-  //     $colsNumberForBreakpoint: map.get($columns, $breakpointName);
-  //     $colWidth: math.div(100%, $colsNumberForBreakpoint);
-
-  //     @if $breakpointsIndex <=$colsNumberForBreakpoint {
-  //       @media screen and (min-width:#{$breakpointValuePx}) {
-  //         @for $i from $colsNumberForBreakpoint through 1 {
-  //           .col-#{$breakpointName}-#{$i} {
-  //             // $calculateWidth: 
-  //             width: $colWidth * $i;
-  //             $parentWidth: $colWidth * $i;
-
-  //             @each $breakpointNameChild,
-  //             $breakpointValueChild in variables.$breakpoints {
-  //               $breakpointsIndexChild: index(variables.$breakpoints, $breakpointNameChild $breakpointValueChild);
-
-  //               @if $breakpointsIndexChild <=$breakpointsIndex {
-  //                 @for $childIndex from $colsNumberForBreakpoint through 1 {
-  //                   .col-#{$breakpointNameChild}-#{$childIndex} {
-  //                     $parentToChildRatio: math.div($colsNumberForBreakpoint, $i);
-  //                     width: math.div(100%, $parentWidth) * $childIndex * $colWidth;
-  //                   }
-  //                 }
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
-}
-
-.col {
-  &_narrow {
-    background-color: aqua;
-  }
-
-  &_wide {
-    background-color: aqua;
-  }
 }

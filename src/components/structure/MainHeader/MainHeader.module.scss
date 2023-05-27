@@ -3,10 +3,6 @@
 @use 'sass:map';
 
 .mainHeader {
-    // opacity: 0;
-    // visibility: hidden;
-
-    &__test {
-        background-color: adjust-hue($color: #000000, $degrees: 0);
-    }
+    display: flex;
+    flex-wrap: wrap;
 }
