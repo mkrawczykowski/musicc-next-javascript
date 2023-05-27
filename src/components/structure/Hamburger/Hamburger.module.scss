@@ -1,6 +1,8 @@
 @use '../../../styles/global/' as global;
 
 .hamburger {
+  grid-column: 2;
+  grid-row: 2;
   display: block;
   width: 5rem;
   height: 5rem;

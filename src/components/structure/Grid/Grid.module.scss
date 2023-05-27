@@ -39,13 +39,14 @@ $columns: (
 
 .row {
   &HeaderColumns {
-    grid-template-columns: auto 2rem;
+    display: grid;
+    grid-template-columns: auto 5rem;
     grid-template-rows: auto auto auto;
 
-    @include global.media-up(xxl) {
-      grid-template-columns: 21.9rem 93.7rem;
-      grid-template-rows: auto;
-    }
+    // @include global.media-up(xxl) {
+    //   grid-template-columns: 21.9rem 93.7rem;
+    //   grid-template-rows: auto;
+    // }
   }
 
   &FirstColumnSidebar {
