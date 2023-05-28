@@ -17,11 +17,11 @@ const Layout = ({ children }) => {
             </Head>
             <main>
                 <MainHeader />
-                <HeroPageTitle />
-                <SectionTracksWithFilters></SectionTracksWithFilters>
+                {/* <HeroPageTitle />
+                <SectionTracksWithFilters></SectionTracksWithFilters> */}
                 {children}
             </main>
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </>
     )
 }

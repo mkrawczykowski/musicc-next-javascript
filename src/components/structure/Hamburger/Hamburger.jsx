@@ -6,17 +6,15 @@ const Hamburger = () => {
   const { state, setState } = useContext(Context);
 
   const clickHandler = (e) => {
+    const hamburger = document.getElementById('js-hamburger');
     const newState = { ...state };
     newState.mobileMenuActive = !newState.mobileMenuActive;
     setState(newState);
-    console.log('state');
-    console.log(state);
-    e.target.classList.toggle('active')
-    console.log('=========================');
-
+    hamburger.classList.toggle(styles.active);
   }
+
   return (
-    <div className={styles.hamburger} onClick={clickHandler}>
+    <div className={styles.hamburger} onClick={clickHandler} id="js-hamburger">
       <span></span>
       <span></span>
       <span></span>
