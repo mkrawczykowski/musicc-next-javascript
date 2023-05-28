@@ -5,7 +5,7 @@ import MainMenuItem from '../MainMenuItem/MainMenuItem';
 
 const MainMenu = () => {
   const { state } = useContext(Context);
-  const mobileMenuActive = state.mobileMenuActive ? styles.MainMenuActive : null;
+  const mobileMenuActive = state.mobileMenuActive ? styles.MainMenu__listActive : null;
   const megaMenu1 =
   {
     moods:
@@ -85,12 +85,15 @@ const MainMenu = () => {
   }
 
   return (
-    <ul className={[styles.MainMenu, mobileMenuActive].join(' ')}>
-      <MainMenuItem label="free music" url="/" subMenuData={megaMenu1} />
-      <MainMenuItem label="Creative Commons 4.0 license" url="/" />
-      <MainMenuItem label="About the author" url="/" />
-      <MainMenuItem label="Contact the author" url="/" />
-    </ul>
+    <div className={styles.MainMenu}>
+      <ul className={[styles.MainMenu__list, mobileMenuActive].join(' ')}>
+        <MainMenuItem label="free music" url="/" subMenuData={megaMenu1} />
+        <MainMenuItem label="Creative Commons 4.0 license" url="/" />
+        <MainMenuItem label="About the author" url="/" />
+        <MainMenuItem label="Contact the author" url="/" />
+      </ul>
+    </div>
+
   )
 }
 

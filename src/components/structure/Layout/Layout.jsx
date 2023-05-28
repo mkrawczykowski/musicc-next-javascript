@@ -1,6 +1,6 @@
 import React from 'react';
+import styles from './Layout.module.scss';
 import Head from 'next/head';
-// import MainHeader from '../MainHeader/MainHeader';
 import Footer from '../Footer/Footer';
 import SectionTracksWithFilters from '@/components/sections/SectionTracksWithFilters/SectionTracksWithFilters';
 import HeroPageTitle from '../HeroPageTitle/HeroPageTitle';
@@ -15,10 +15,10 @@ const Layout = ({ children }) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
+            <main className={styles.main}>
                 <MainHeader />
-                {/* <HeroPageTitle />
-                <SectionTracksWithFilters></SectionTracksWithFilters> */}
+                <HeroPageTitle />
+                <SectionTracksWithFilters></SectionTracksWithFilters>
                 {children}
             </main>
             {/* <Footer></Footer> */}

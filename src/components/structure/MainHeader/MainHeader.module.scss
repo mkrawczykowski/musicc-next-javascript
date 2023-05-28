@@ -2,4 +2,18 @@
 @use 'sass:math';
 @use 'sass:map';
 
-.mainHeader {}
+.mainHeader {
+  width: 100%;
+  background-color: none;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+
+  &Active {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 0px 0px 10px 10px;
+    transition: 0.5s all ease;
+
+  }
+}
