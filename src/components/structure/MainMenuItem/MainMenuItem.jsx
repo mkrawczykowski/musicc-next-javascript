@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import styles from './MainMenuItem.module.scss';
 import Link from 'next/link';
 import MegaMenuPanel from '../MegaMenuPanel/MegaMenuPanel';
 
@@ -14,7 +15,7 @@ const MainMenuItem = ({ label, url, subMenuData }) => {
     }
   }
   return (
-    <li>
+    <li className={styles.mainMenuItem}>
       <Link href={url} legacyBehavior>
         <a href="" ref={ref} onClick={handleLinkClick} className={classes}>{label}</a>
       </Link>

@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from './MainMenu.module.scss';
+import { Context } from '../Context/Context';
 import MainMenuItem from '../MainMenuItem/MainMenuItem';
 
-const MainMenu = ({ }) => {
-
+const MainMenu = () => {
+  const { state } = useContext(Context);
+  const mobileMenuActive = state.mobileMenuActive ? styles.MainMenuActive : null;
   const megaMenu1 =
   {
     moods:
@@ -83,7 +85,7 @@ const MainMenu = ({ }) => {
   }
 
   return (
-    <ul className={styles.MainMenu}>
+    <ul className={[styles.MainMenu, mobileMenuActive].join(' ')}>
       <MainMenuItem label="free music" url="/" subMenuData={megaMenu1} />
       <MainMenuItem label="Creative Commons 4.0 license" url="/" />
       <MainMenuItem label="About the author" url="/" />
