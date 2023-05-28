@@ -1,1 +1,9 @@
-.mainMenuItem {}
+@use '../../../styles/global/' as global;
+
+.mainMenuItem {
+  color: global.$white;
+
+  &__link {
+    color: global.$white;
+  }
+}

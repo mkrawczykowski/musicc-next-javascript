@@ -17,7 +17,7 @@ const MainMenuItem = ({ label, url, subMenuData }) => {
   return (
     <li className={styles.mainMenuItem}>
       <Link href={url} legacyBehavior>
-        <a href="" ref={ref} onClick={handleLinkClick} className={classes}>{label}</a>
+        <a href="" ref={ref} onClick={handleLinkClick} className={[classes, styles.mainMenuItem__link].join(' ')}>{label}</a>
       </Link>
       {subMenuData ? <MegaMenuPanel megaMenuType='mega_menu_1' subMenuData={subMenuData} /> : null}
     </li>
