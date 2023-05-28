@@ -11,7 +11,7 @@ const MainHeader = () => {
     const { state } = useContext(Context);
     const mainHeaderActive = state.mobileMenuActive ? styles.mainHeaderActive : null;
     return (
-        <div className={[styles.mainHeader, mainHeaderActive].join(' ')}>
+        <header className={[styles.mainHeader, mainHeaderActive].join(' ')}>
             <Container>
                 <Row classes={'rowHeaderColumns'}>
                     <Search />
@@ -20,7 +20,7 @@ const MainHeader = () => {
                     <MainMenu />
                 </Row>
             </Container>
-        </div>
+        </header>
     )
 }
 
