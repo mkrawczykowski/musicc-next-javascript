@@ -2,6 +2,7 @@ import React from "react";
 import styles from './SectionTracksWithFilters.module.scss';
 import { Container, Row, Col } from '../../structure/Grid/Grid';
 import TaxonomyFilterList from '../../content/TaxonomyFilterList/TaxonomyFilterList';
+import TrackBox from '../../content/TrackBox/TrackBox';
 
 const moods = [
   'warm',
@@ -40,7 +41,21 @@ const SectionTracksWithFilters = () => {
             <TaxonomyFilterList title="by instrument" taxonomies={instruments}></TaxonomyFilterList>
           </Col>
           <Col>
-
+            <TrackBox
+              trackName="Please, don't stop the music"
+              trackShortDescription="Tutaj będzie krótki opis kawałka, który nie zawsze będzie występował. Dam tutaj ograniczony boksik, czyli mały boks."
+              trackTags={['happy', 'mysterious', 'happy', 'warm']}
+            />
+            <TrackBox
+              trackName="Please, don't stop the music"
+              trackShortDescription="Tutaj będzie krótki opis kawałka, który nie zawsze będzie występował. Dam tutaj ograniczony boksik, czyli mały boks."
+              trackTags={['happy', 'mysterious', 'happy', 'warm']}
+            />
+            <TrackBox
+              trackName="Please, don't stop the music"
+              trackShortDescription="Tutaj będzie krótki opis kawałka, który nie zawsze będzie występował. Dam tutaj ograniczony boksik, czyli mały boks."
+              trackTags={['happy', 'mysterious', 'happy', 'warm']}
+            />
           </Col>
         </Row>
       </Container>

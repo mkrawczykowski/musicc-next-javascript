@@ -1,13 +1,22 @@
 import React from 'react';
 import style from './TrackBox.module.scss';
+import TrackTags from '../TrackTags/TrackTags';
 
-const TrackBox = () => {
+const TrackBox = ({ trackName, trackShortDescription, trackTags }) => {
   return (
     <div className={style.trackBox}>
-      <h3 className={style.trackBox__heading}>Please, dont stop the music</h3>
-      <p className={style.trackBox__description}>
-        Tutaj będzie krótki opis kawałka, który nie zawsze będzie występował. Dam tutaj ograniczony boksik, czyli mały boks.
-      </p>
+      {
+        trackName ?
+          <h3 className={style.trackBox__heading}>{trackName}</h3>
+          : null
+      }
+
+      {
+        trackShortDescription ?
+          <p className={style.trackBox__description}> {trackShortDescription}</p>
+          : null
+      }
+
       <div className={style.trackBox__playerRow}>
         <div className={style.trackBox__player}>
           <div className={style.trackBox__playerPlay}></div>
@@ -20,17 +29,10 @@ const TrackBox = () => {
           <li className={style.trackBox__icon}>share</li>
         </ul>
       </div>
-      <ul className={style.trackBox__taxonomies}>
-        <li className={style.trackBox__taxonomy}>happy</li>
-        <li className={style.trackBox__taxonomy}>mysterious</li>
-        <li className={style.trackBox__taxonomy}>warm</li>
-        <li className={style.trackBox__taxonomy}>synth</li>
-        <li className={style.trackBox__taxonomy}>piano</li>
-        <li className={style.trackBox__taxonomy}>drums</li>
-        <li className={style.trackBox__taxonomy}>bass</li>
-      </ul>
+      {
+        trackTags ? <TrackTags trackTags={trackTags} /> : null
+      }
     </div>
-
   )
 }
 
