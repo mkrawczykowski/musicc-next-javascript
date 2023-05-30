@@ -1,15 +1,104 @@
 @use '../../../styles/global/' as global;
 
 .taxonomyFilterList {
+  padding: 0.2rem 0;
+
   &__heading {
-    font-size: 2rem;
-    color: global.$white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-transform: uppercase;
+
+    background: linear-gradient(90.75deg, rgba(255, 0, 168, 0.6) 2.97%, rgba(189, 0, 255, 0.6) 55.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    position: relative;
+    margin: 0 0 3.3rem 0;
+
+    &:after {
+      position: relative;
+      top: -0.3rem;
+      right: -0.6rem;
+      content: '';
+      display: inline-block;
+      width: 1.4rem;
+      height: 0.8rem;
+      transition: all 0.3s ease;
+      background-image: url('data:image/svg+xml,<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L7.29297 7.5" stroke="%23BD00FF" stroke-width="2" stroke-linecap="round"/><path d="M14.293 1.5L7.29297 7.5" stroke="%23BD00FF" stroke-width="2" stroke-linecap="round"/></svg>');
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &Active {
+      margin: 0 0 1rem 0;
+
+      &:after {
+        transform: rotateZ(180deg);
+        transition: all 0.3s ease;
+      }
+    }
   }
 
   &__list {
+    max-height: 0;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &Active {
+      max-height: 9999rem;
+      transition: max-height 0.3s ease;
+    }
+
     &Item {
       font-size: 1.4rem;
       color: global.$white;
+      line-height: 4.4rem;
+      font-family: 'Poppins';
+      font-weight: 400;
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        position: absolute;
+        width: 0%;
+        height: 0.1rem;
+        display: inline-block;
+        background-color: global.$white;
+        content: '';
+        bottom: 13px;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &:before {
+          position: absolute;
+          width: 100%;
+          height: 0.1rem;
+          display: inline-block;
+          background-color: global.$white;
+          content: '';
+          transition: all 0.3s ease;
+        }
+      }
+
+      &Active {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 1.4rem;
+        line-height: 4.4rem;
+        color: global.$white;
+      }
     }
   }
 }

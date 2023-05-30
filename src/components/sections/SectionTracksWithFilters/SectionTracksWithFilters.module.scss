@@ -1,1 +1,32 @@
-.sectionTracksWithFilters {}
+@use '../../../styles/global/' as global;
+
+.sectionTracksWithFilters {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 5rem 0;
+
+  &__sectionHeading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 6rem;
+    margin-bottom: 0.2rem;
+
+    background: linear-gradient(90.75deg, rgba(255, 0, 168, 0.6) 2.97%, rgba(189, 0, 255, 0.6) 55.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  &__sectionSubheading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 0 3.7rem 0;
+
+    color: global.$warmWhite;
+  }
+}

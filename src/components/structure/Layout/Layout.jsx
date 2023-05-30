@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
             </Head>
             <MainHeader />
             <main className={styles.main}>
-                <HeroPageTitle />
+                {/* <HeroPageTitle /> */}
                 <SectionTracksWithFilters></SectionTracksWithFilters>
                 {children}
             </main>

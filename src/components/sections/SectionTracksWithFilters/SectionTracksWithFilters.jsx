@@ -5,26 +5,61 @@ import TaxonomyFilterList from '../../content/TaxonomyFilterList/TaxonomyFilterL
 import TrackBox from '../../content/TrackBox/TrackBox';
 
 const moods = [
-  'warm',
-  'cold',
-  'mysterious',
-  'emotional',
-  'happy',
-  'sad',
-  'melancholic',
-  'romantic',
-  'calm',
-  'energeting/action',
-  'motivation',
-  'upbeat',
+  {
+    name: 'warm',
+    active: true
+  },
+  {
+    name: 'cold',
+    active: false
+  },
+  {
+    name: 'mysterious',
+    active: true
+  },
+  {
+    name: 'emotional',
+    active: false
+  },
+  {
+    name: 'happy',
+    active: true
+  },
+  {
+    name: 'sad',
+    active: false
+  },
+  {
+    name: 'motivation',
+    active: false
+  },
+  {
+    name: 'upbeat',
+    active: false
+  },
 ]
 
 const instruments = [
-  'synth',
-  'piano',
-  'drums',
-  'bass',
-  'double bass',
+  {
+    name: 'synth',
+    active: false
+  },
+  {
+    name: 'piano',
+    active: true
+  },
+  {
+    name: 'drums',
+    active: false
+  },
+  {
+    name: 'bass',
+    active: false
+  },
+  {
+    name: 'double bass',
+    active: false
+  },
 ];
 
 const SectionTracksWithFilters = () => {
@@ -32,12 +67,14 @@ const SectionTracksWithFilters = () => {
     <section className={styles.sectionTracksWithFilters}>
       <Container>
         <Row>
-          <h2 className={styles.sectionTracksWithFilters}>Free music</h2>
+          <h2 className={styles.sectionTracksWithFilters__sectionHeading}>Free music</h2>
           <h3 className={styles.sectionTracksWithFilters__sectionSubheading}>(Creative Commons)</h3>
         </Row>
-        <Row classes={'containerTwoColumns'}>
+        <Row classes={'rowFirstColumnSidebar'}>
           <Col>
-            <TaxonomyFilterList title="by mood" taxonomies={moods}></TaxonomyFilterList>
+            {
+              moods ? <TaxonomyFilterList title="by mood" taxonomies={moods} /> : null
+            }
             <TaxonomyFilterList title="by instrument" taxonomies={instruments}></TaxonomyFilterList>
           </Col>
           <Col>

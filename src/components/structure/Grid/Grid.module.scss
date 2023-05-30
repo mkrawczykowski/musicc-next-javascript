@@ -42,24 +42,21 @@ $columns: (
     display: grid;
     grid-template-columns: auto 5rem;
     grid-template-rows: auto auto auto;
-
-    // @include global.media-up(xxl) {
-    //   grid-template-columns: 21.9rem 93.7rem;
-    //   grid-template-rows: auto;
-    // }
   }
 
   &FirstColumnSidebar {
-    grid-template-columns: auto 2rem;
-    grid-template-rows: auto auto auto;
 
     @include global.media-up(xxl) {
-      grid-template-columns: 21.9rem 93.7rem;
-      grid-template-rows: auto;
+      grid-template-columns: auto 2rem;
+      grid-template-rows: auto auto auto;
     }
+
+    display: grid;
+
   }
 
   &SecondColumnNarrow {
+    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: auto;
 
