@@ -75,7 +75,9 @@ const SectionTracksWithFilters = () => {
             {
               moods ? <TaxonomyFilterList title="by mood" taxonomies={moods} /> : null
             }
-            <TaxonomyFilterList title="by instrument" taxonomies={instruments}></TaxonomyFilterList>
+            {
+              instruments ? <TaxonomyFilterList title="by instrument" taxonomies={instruments} /> : null
+            }
           </Col>
           <Col>
             <TrackBox
