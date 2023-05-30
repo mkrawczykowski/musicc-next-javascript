@@ -62,6 +62,13 @@ const instruments = [
   },
 ];
 
+const type = [
+  {
+    name: 'alternative',
+    active: false
+  },
+]
+
 const SectionTracksWithFilters = () => {
   return (
     <section className={styles.sectionTracksWithFilters}>
@@ -77,6 +84,9 @@ const SectionTracksWithFilters = () => {
             }
             {
               instruments ? <TaxonomyFilterList title="by instrument" taxonomies={instruments} /> : null
+            }
+            {
+              type ? <TaxonomyFilterList title="by type" taxonomies={type} /> : null
             }
           </Col>
           <Col>
