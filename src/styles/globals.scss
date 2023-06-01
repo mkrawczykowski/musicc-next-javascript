@@ -1,4 +1,4 @@
-@use './global/variables';
+@use './global/variables' as global;
 @use './reset.scss';
 
 // * {
@@ -10,6 +10,18 @@ html {
   font-size: 10px;
   font-family: 'Raleway', sans-serif;
   font-size: 62.5%;
+  scrollbar-color: global.$pinkGradient1 global.$darkViolet;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: global.$darkViolet;
+}
+
+::-webkit-scrollbar-thumb {
+  background: global.$pinkGradient1;
 }
 
 body {
