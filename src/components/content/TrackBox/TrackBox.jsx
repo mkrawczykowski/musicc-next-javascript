@@ -3,6 +3,11 @@ import style from './TrackBox.module.scss';
 import TrackTags from '../TrackTags/TrackTags';
 
 const TrackBox = ({ trackName, trackShortDescription, trackTags }) => {
+
+  let playerState = 'Play';
+  let stateClass = `trackBox__playerButton${playerState}`;
+  console.log(style[stateClass]);
+
   return (
     <div className={style.trackBox}>
       {
@@ -18,14 +23,17 @@ const TrackBox = ({ trackName, trackShortDescription, trackTags }) => {
 
       <div className={style.trackBox__playerRow}>
         <div className={style.trackBox__player}>
-          <div className={style.trackBox__playerPlay}></div>
+          <button className={[style.trackBox__playerButton, style[stateClass]].join(' ')}></button>
           <div className={style.trackBox__playerName}></div>
-          <div className={style.trackBox__playerTrack}></div>
-          <p className={style.trackBox__playerTime}></p>
+          <div className={style.trackBox__playerSeek}>
+            <span className={style.trackBox__playerSeekTrack} />
+            <span className={style.trackBox__playerSeekPoint} />
+          </div>
+          <p className={style.trackBox__playerTime}>05:50</p>
         </div>
         <ul className={style.trackBox__icons}>
-          <li className={style.trackBox__icon}>download</li>
-          <li className={style.trackBox__icon}>share</li>
+          <li className={[style.trackBox__icon, style.trackBox__iconDownload].join(' ')}>download</li>
+          <li className={[style.trackBox__icon, style.trackBox__iconShare].join(' ')}>share</li>
         </ul>
       </div>
       {
