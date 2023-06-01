@@ -10,7 +10,6 @@ const TrackBox = ({ trackName, trackShortDescription, trackTags }) => {
           <h3 className={style.trackBox__heading}>{trackName}</h3>
           : null
       }
-
       {
         trackShortDescription ?
           <p className={style.trackBox__description}> {trackShortDescription}</p>
