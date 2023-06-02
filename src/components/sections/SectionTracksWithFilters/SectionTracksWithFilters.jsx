@@ -93,17 +93,17 @@ const SectionTracksWithFilters = () => {
             <TrackBox
               trackName="Please, don't stop the music"
               trackShortDescription="Tutaj będzie krótki opis kawałka, który nie zawsze będzie występował. Dam tutaj ograniczony boksik, czyli mały boks."
-              trackTags={['happy', 'mysterious', 'happy', 'warm']}
+              trackTags={['happy', 'mysterious', 'happy', 'warm', 'happy', 'mysterious', 'happy', 'piano', 'happy', 'mysterious', 'happy', 'warm']}
             />
             <TrackBox
               trackName="Please, don't stop the music"
               trackShortDescription="Tutaj będzie krótki opis kawałka, który nie zawsze będzie występował. Dam tutaj ograniczony boksik, czyli mały boks."
-              trackTags={['happy', 'mysterious', 'happy', 'warm']}
+              trackTags={['happy', 'mysterious', 'happy', 'warm', 'happy', 'mysterious', 'happy', 'piano', 'happy', 'mysterious', 'happy', 'warm']}
             />
             <TrackBox
               trackName="Please, don't stop the music"
               trackShortDescription="Tutaj będzie krótki opis kawałka, który nie zawsze będzie występował. Dam tutaj ograniczony boksik, czyli mały boks."
-              trackTags={['happy', 'mysterious', 'happy', 'warm']}
+              trackTags={['happy', 'mysterious', 'happy', 'warm', 'happy', 'mysterious', 'happy', 'piano', 'happy', 'mysterious', 'happy', 'warm']}
             />
           </Col>
         </Row>

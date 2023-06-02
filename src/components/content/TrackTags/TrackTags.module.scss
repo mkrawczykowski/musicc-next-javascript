@@ -1,1 +1,19 @@
-.trackTags {}
+@use '../../../styles/global/' as global;
+
+.trackTags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  gap: 1.3rem 2.2rem;
+
+  &__taxonomy {
+    &Link {
+      color: global.$white;
+      font-family: 'Poppins', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 2.1rem;
+    }
+  }
+}

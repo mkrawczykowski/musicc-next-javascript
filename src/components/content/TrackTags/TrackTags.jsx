@@ -8,7 +8,7 @@ const TrackTags = ({ trackTags }) => {
         {
           trackTags.map(trackTag => {
             return <li className={style.trackTags__taxonomy}>
-              <a href="">
+              <a href="" className={style.trackTags__taxonomyLink}>
                 {trackTag}
               </a>
             </li>
