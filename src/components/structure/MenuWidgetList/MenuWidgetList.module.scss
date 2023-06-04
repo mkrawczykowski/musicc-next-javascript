@@ -1,1 +1,44 @@
-.menuWidgetList {}
+@use '../../../styles/global/' as global;
+
+.menuWidgetList {
+  &__heading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    background: linear-gradient(90.75deg, #FF00A8 2.97%, #BD00FF 55.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+
+    &Item {
+      width: calc(50% - 1rem);
+
+      &Link {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: global.$white;
+      }
+    }
+  }
+
+  &__linkAll {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: global.$white;
+  }
+}

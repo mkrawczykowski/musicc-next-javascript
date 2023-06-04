@@ -5,5 +5,33 @@
 
   &__link {
     color: global.$white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    position: relative;
+
+    &_hasSubMenu {
+      &:after {
+        background-image: url('data:image/svg+xml,<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L7.29297 7.5" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M14.293 1.5L7.29297 7.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>');
+        content: '';
+        width: 1.6rem;
+        height: 0.9rem;
+        display: inline-block;
+        position: absolute;
+        top: 0.7rem;
+        right: -2.2rem;
+        transition: all 0.3s ease;
+      }
+
+      &.mainMenuItem__linkActive {
+        &:after {
+          background-image: url('data:image/svg+xml,<svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L7.29297 7.5" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M14.293 1.5L7.29297 7.5" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>');
+          transform: rotateZ(180deg);
+          transition: all 0.3s ease;
+        }
+      }
+    }
   }
 }

@@ -4,7 +4,7 @@
 
 .mainHeader {
   width: 100%;
-  background-color: none;
+  background-color: transparent;
   transition: 0.5s all ease;
   position: absolute;
   top: 0;
@@ -14,6 +14,5 @@
     backdrop-filter: blur(25px);
     border-radius: 0px 0px 10px 10px;
     transition: 0.5s all ease;
-
   }
 }

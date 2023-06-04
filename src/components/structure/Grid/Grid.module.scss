@@ -42,6 +42,8 @@ $columns: (
     display: grid;
     grid-template-columns: auto 5rem;
     grid-template-rows: auto auto auto;
+    padding-top: 1.7rem;
+    position: relative;
   }
 
   &FirstColumnSidebar {
@@ -52,7 +54,6 @@ $columns: (
     }
 
     display: grid;
-
   }
 
   &SecondColumnNarrow {
@@ -73,6 +74,7 @@ $columns: (
       }
 
       &.pageTitleIcons {
+        display: none;
         height: 12.9rem;
         display: none;
         flex-direction: row;

@@ -13,7 +13,7 @@ const MainHeader = () => {
     return (
         <header className={[styles.mainHeader, mainHeaderActive].join(' ')}>
             <Container>
-                <Row classes={'rowHeaderColumns'}>
+                <Row classes={'rowHeaderColumns'} className={styles.mainHeader__row}>
                     <Search />
                     <Logo />
                     <Hamburger />

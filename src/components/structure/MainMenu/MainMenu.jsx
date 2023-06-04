@@ -6,6 +6,7 @@ import MainMenuItem from '../MainMenuItem/MainMenuItem';
 const MainMenu = () => {
   const { state } = useContext(Context);
   const mobileMenuActive = state.mobileMenuActive ? styles.MainMenu__listActive : null;
+  const activeMegaMenu = state.activeMegaMenu;
   const megaMenu1 =
   {
     moods:
@@ -83,11 +84,19 @@ const MainMenu = () => {
       widgetLinkUrl: '#'
     },
   }
-
+  // if (state.activeMegaMenu === subMenuIndex) {
+  //   const newState = { ...state };
+  //   newState.activeMegaMenu = null;
+  // }
+  // if (!state.activeMegaMenu === subMenuIndex) {
+  //   const newState = { ...state };
+  //   newState.activeMegaMenu = subMenuIndex;
+  // }
+  // newState.activeMegaMenu = subMenuIndex;
   return (
     <div className={styles.MainMenu}>
       <ul className={[styles.MainMenu__list, mobileMenuActive].join(' ')}>
-        <MainMenuItem label="free music" url="/" subMenuData={megaMenu1} />
+        <MainMenuItem label="free music" url="/" subMenuData={megaMenu1} subMenuIndex={0} activeMenu={activeMegaMenu === 0 ? true : false} />
         <MainMenuItem label="Creative Commons 4.0 license" url="/" />
         <MainMenuItem label="About the author" url="/" />
         <MainMenuItem label="Contact the author" url="/" />

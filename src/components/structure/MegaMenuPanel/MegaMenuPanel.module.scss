@@ -1,0 +1,8 @@
+.megaMenuPanel {
+  max-height: 0;
+  overflow: hidden;
+
+  &Active {
+    max-height: 9999px;
+  }
+}

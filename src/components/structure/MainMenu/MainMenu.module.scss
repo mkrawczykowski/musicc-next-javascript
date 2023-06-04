@@ -1,9 +1,8 @@
 .MainMenu {
+  grid-column: 1 / span 2;
 
   &__list {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row: 3;
+
     max-height: 0;
     overflow: hidden;
     transition: 0.5s max-height ease;
