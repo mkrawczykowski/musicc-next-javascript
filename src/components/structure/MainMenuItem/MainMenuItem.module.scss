@@ -3,6 +3,27 @@
 .mainMenuItem {
   color: global.$white;
 
+  @include global.media-up(xl) {
+
+    &:first-of-type {
+      margin-left: auto;
+    }
+
+    @include global.media-up(xl) {
+      &:not(:last-of-type) {
+        .mainMenuItem__link {
+          padding: 1.2rem 4.3rem 0.9rem 3.1rem;
+        }
+      }
+
+      &:last-of-type {
+        .mainMenuItem__link {
+          margin: 0 0 0 3.3rem;
+        }
+      }
+    }
+  }
+
   &__link {
     color: global.$white;
     font-family: 'Poppins';
@@ -23,6 +44,11 @@
         top: 0.7rem;
         right: -2.2rem;
         transition: all 0.3s ease;
+
+        @include global.media-up(xl) {
+          top: 1.8rem;
+          right: 2.2rem;
+        }
       }
 
       &.mainMenuItem__linkActive {
@@ -32,6 +58,12 @@
           transition: all 0.3s ease;
         }
       }
+    }
+
+    &Active {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(25px);
+      border-radius: 10px 10px 0px 0px;
     }
   }
 }

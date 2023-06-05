@@ -44,13 +44,23 @@ $columns: (
     grid-template-rows: auto auto auto;
     padding-top: 1.7rem;
     position: relative;
+
+    @include global.media-up(xl) {
+      grid-template-columns: auto 45.8rem;
+      grid-template-rows: auto auto;
+    }
   }
 
   &FirstColumnSidebar {
 
+    @include global.media-up(md) {
+      grid-template-columns: 21.9rem auto;
+      column-gap: 3rem;
+    }
+
     @include global.media-up(xxl) {
-      grid-template-columns: auto 2rem;
-      grid-template-rows: auto auto auto;
+      grid-template-columns: 21.9rem auto;
+      grid-template-rows: auto;
     }
 
     display: grid;
@@ -62,7 +72,7 @@ $columns: (
     grid-template-rows: auto;
 
     @include global.media-up(xl) {
-      grid-template-columns: auto 25rem;
+      grid-template-columns: auto 24.9rem;
       grid-template-rows: auto;
     }
 
@@ -84,6 +94,18 @@ $columns: (
         @include global.media-up(xl) {
           display: flex;
         }
+
+        @include global.media-up(xxl) {
+          padding-top: 1.8rem;
+        }
+
+        img {
+          &:nth-of-type(2) {
+            margin-top: 0.5rem;
+            margin-right: -0.1rem;
+          }
+        }
+
       }
     }
 

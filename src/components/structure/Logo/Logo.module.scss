@@ -8,6 +8,11 @@
   grid-row: 2;
   margin: 0 0 0 -0.2rem;
 
+  @include global.media-up(xl) {
+    grid-row: 1;
+    margin: 0 0 0 1.3rem;
+  }
+
   &__text {
     font-family: 'Inter';
     font-style: normal;
@@ -16,6 +21,10 @@
     line-height: 1.9rem;
     position: relative;
     color: global.$white;
+
+    @include global.media-up(xl) {
+      font-size: 2rem;
+    }
 
     &:before {
       position: absolute;

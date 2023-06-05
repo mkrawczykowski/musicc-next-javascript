@@ -10,6 +10,10 @@
   top: -0.7rem;
   left: 3.8rem;
 
+  @include global.media-up(xl) {
+    display: none;
+  }
+
   &:hover {
     cursor: pointer;
   }

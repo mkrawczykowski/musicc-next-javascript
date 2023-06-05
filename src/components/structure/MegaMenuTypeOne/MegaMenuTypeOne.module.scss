@@ -1,9 +1,15 @@
+@use '../../../styles/global/' as global;
+
 .MegaMenuTypeOne {
+  // padding: 6.1rem 11.5rem 6.1rem 11.5rem;
+
   &__columns {
     display: grid;
+
+    @include global.media-up(xxl) {
+      grid-template-columns: 33.3rem 33.4rem auto;
+      padding: 6.2rem 11.5rem 4rem 11.5rem
+    }
+
   }
-
-  &__columnNarrow {}
-
-  &__columnWide {}
 }

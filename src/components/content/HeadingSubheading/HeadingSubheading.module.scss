@@ -19,6 +19,10 @@
       line-height: 7.2rem;
       margin-bottom: 0.5rem;
     }
+
+    @include global.media-up(xxl) {
+      margin-bottom: 0.1rem;
+    }
   }
 
   &__secondaryHeading {
@@ -33,5 +37,10 @@
       font-size: 2.4rem;
       line-height: 3.6rem;
     }
+
+    @include global.media-up(xl) {
+      max-width: 50rem;
+    }
+
   }
 }

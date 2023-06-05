@@ -4,7 +4,7 @@ export const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
     const initialState = {
-        activeMegaMenu: 0,
+        activeMegaMenu: undefined,
         mobileMenuActive: false
     };
     const [state, setState] = useState(initialState);

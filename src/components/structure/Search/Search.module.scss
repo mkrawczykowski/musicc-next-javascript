@@ -10,6 +10,23 @@
   border-radius: 4.4rem;
   margin: 0 -2.2rem 3.5rem -1.4rem;
   padding: 0.3rem 0 0 3.5rem;
+  color: variables.$white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  font-family: 'Poppins', sans-serif;
+
+  @include variables.media-up(xl) {
+    grid-column-start: 2;
+    margin: -1.6rem 0 0 0;
+    padding: 0.3rem 0 0 5rem;
+    border-radius: 4.4rem;
+    height: 5.1rem;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    position: relative;
+  }
 
   &::placeholder {
     color: variables.$white;
@@ -18,5 +35,12 @@
     font-size: 1.4rem;
     line-height: 2.1rem;
     font-family: 'Poppins', sans-serif;
+
+    @include variables.media-up(xl) {
+      position: relative;
+      top: -0.3rem;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+    }
   }
 }

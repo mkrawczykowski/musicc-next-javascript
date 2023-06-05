@@ -1,3 +1,9 @@
+@use '../../../styles/global/' as global;
+
 .main {
   margin-top: 18.7rem;
+
+  @include global.media-up(xl) {
+    margin-top: 32.2rem;
+  }
 }

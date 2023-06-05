@@ -96,10 +96,10 @@ const MainMenu = () => {
   return (
     <div className={styles.MainMenu}>
       <ul className={[styles.MainMenu__list, mobileMenuActive].join(' ')}>
-        <MainMenuItem label="free music" url="/" subMenuData={megaMenu1} subMenuIndex={0} activeMenu={activeMegaMenu === 0 ? true : false} />
+        <MainMenuItem label="free music" url="/" subMenuData={megaMenu1} subMenuIndex={0} />
         <MainMenuItem label="Creative Commons 4.0 license" url="/" />
-        <MainMenuItem label="About the author" url="/" />
-        <MainMenuItem label="Contact the author" url="/" />
+        <MainMenuItem label="about the author" url="/" />
+        <MainMenuItem label="contact the author" url="/" />
       </ul>
     </div>
 

@@ -16,7 +16,7 @@ const HeroPageTitle = () => {
               mainHeadingType="h1"
               secondaryHeadingType="h2"
               mainHeadingString="Free CC music"
-              secondaryHeadingString="produced by professional web developer + non-professional music producer" />
+              secondaryHeadingString={`produced by professional web developer + non-professional music producer`} />
           </Col>
           <Col classes="pageTitleIcons">
             <Image src={headerIconPlay} alt="" />

@@ -1,11 +1,20 @@
+@use '../../../styles/global/' as global;
+
 .MainMenu {
   grid-column: 1 / span 2;
 
   &__list {
-
     max-height: 0;
     overflow: hidden;
     transition: 0.5s max-height ease;
+
+    @include global.media-up(xl) {
+      max-height: 9999px;
+      display: flex;
+      position: relative;
+      overflow: visible;
+      margin: 4.1rem 0.3rem 0 0;
+    }
 
     &Active {
       max-height: 999px;

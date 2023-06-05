@@ -1,1 +1,72 @@
-.menuWidgetSimple {}
+@use '../../../styles/global/' as global;
+
+.menuWidgetSimple {
+  @include global.media-up(xl) {
+    margin-bottom: 4.6rem;
+  }
+
+  &__heading {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    background: linear-gradient(90.75deg, #FF00A8 2.97%, #BD00FF 55.95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+
+    @include global.media-up(xxl) {
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  &__paragraph {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: global.$white;
+  }
+
+  &__linkAll {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: global.$white;
+    transition: all 0.3s ease;
+
+    @include global.media-up(xl) {
+      margin-top: 4.9rem;
+      display: inline-block;
+      position: relative;
+    }
+
+    &:after {
+      content: '';
+      width: 100%;
+      height: 0.1rem;
+      display: inline-block;
+      background-color: global.$white;
+      position: relative;
+      top: -1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      color: global.$pinkLight;
+      transition: all 0.3s ease;
+
+      &:after {
+        background-color: global.$pinkLight;
+        transition: all 0.3s ease;
+      }
+
+
+    }
+  }
+}

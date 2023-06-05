@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './MegaMenuTypeOne.module.scss';
 import MenuWidgetList from '../MenuWidgetList/MenuWidgetList';
-import MenuWidgetSimple from '../MenuWidgetList/MenuWidgetList';
+import MenuWidgetSimple from '../MenuWidgetSimple/MenuWidgetSimple';
 
 const MegaMenuTypeOne = ({ subMenuData }) => {
   return (
@@ -10,10 +10,10 @@ const MegaMenuTypeOne = ({ subMenuData }) => {
         <div className={styles.MegaMenuTypeOne__columnNarrow}>
           <MenuWidgetList data={subMenuData.moods} />
         </div>
-        <div className={styles.MegaMenuTypeOne__columnNarrow}>
+        <div>
           <MenuWidgetList data={subMenuData.instruments} />
         </div>
-        <div className={styles.MegaMenuTypeOne__columnWide}>
+        <div>
           <MenuWidgetSimple data={subMenuData.mostPopular} />
           <MenuWidgetSimple data={subMenuData.featured} />
         </div>

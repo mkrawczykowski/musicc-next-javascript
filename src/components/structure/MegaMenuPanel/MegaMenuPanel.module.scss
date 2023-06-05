@@ -1,6 +1,23 @@
+@use '../../../styles/global/' as global;
+
 .megaMenuPanel {
   max-height: 0;
   overflow: hidden;
+
+  @include global.media-up(xl) {
+    position: absolute;
+    width: 100%;
+    top: 3.1rem;
+    left: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 1rem;
+  }
+
+  @include global.media-up(xxl) {
+    width: 119.3%;
+    margin: 0 -11rem;
+  }
 
   &Active {
     max-height: 9999px;
