@@ -12,6 +12,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-transform: uppercase;
+    margin-bottom: 2.2rem;
 
     @include global.media-up(xxl) {
       margin-bottom: 4.2rem;
@@ -29,6 +30,7 @@
 
     &Item {
       width: calc(50% - 1rem);
+      margin-bottom: 2.2rem;
 
       @include global.media-up(xxl) {
         margin-bottom: 2rem;
@@ -49,14 +51,15 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
     color: global.$white;
     transition: all 0.3s ease;
+    display: inline-block;
+    margin-top: 1.2rem;
 
     @include global.media-up(xl) {
       margin-top: 2.4rem;
-      display: inline-block;
       position: relative;
     }
 

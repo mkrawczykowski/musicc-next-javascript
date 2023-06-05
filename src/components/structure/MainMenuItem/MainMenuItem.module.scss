@@ -2,11 +2,13 @@
 
 .mainMenuItem {
   color: global.$white;
+  margin-bottom: 2.8rem;
 
   @include global.media-up(xl) {
 
     &:first-of-type {
       margin-left: auto;
+      margin-bottom: 0;
     }
 
     @include global.media-up(xl) {

@@ -7,13 +7,13 @@ const MegaMenuTypeOne = ({ subMenuData }) => {
   return (
     <div className={styles.MegaMenuTypeOne__background}>
       <div className={styles.MegaMenuTypeOne__columns}>
-        <div className={styles.MegaMenuTypeOne__columnNarrow}>
+        <div className={styles.MegaMenuTypeOne__column}>
           <MenuWidgetList data={subMenuData.moods} />
         </div>
-        <div>
+        <div className={styles.MegaMenuTypeOne__column}>
           <MenuWidgetList data={subMenuData.instruments} />
         </div>
-        <div>
+        <div className={styles.MegaMenuTypeOne__column}>
           <MenuWidgetSimple data={subMenuData.mostPopular} />
           <MenuWidgetSimple data={subMenuData.featured} />
         </div>

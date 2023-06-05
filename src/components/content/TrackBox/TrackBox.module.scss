@@ -8,6 +8,10 @@
 
   &:not(:last-of-type) {
     margin-bottom: 10.1rem;
+
+    @include global.media-up(xl) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__heading {

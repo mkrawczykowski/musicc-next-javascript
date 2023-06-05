@@ -18,6 +18,10 @@
     position: relative;
     margin: 0 0 3.3rem 0;
 
+    @include global.media-up(xl) {
+      margin: 0 0 1.3rem 0;
+    }
+
     &:after {
       position: relative;
       top: -0.3rem;
@@ -36,6 +40,10 @@
 
     &Active {
       margin: 0 0 1rem 0;
+
+      @include global.media-up(xl) {
+        margin: 0 0 1.3rem 0;
+      }
 
       &:after {
         transform: rotateZ(180deg);
@@ -65,6 +73,10 @@
       font-weight: 400;
       position: relative;
       display: inline-block;
+
+      @include global.media-up(xl) {
+        font-size: 1.6rem;
+      }
 
       &:before {
         position: absolute;
@@ -97,6 +109,10 @@
         font-size: 1.4rem;
         line-height: 4.4rem;
         color: global.$white;
+
+        @include global.media-up(xl) {
+          font-size: 1.6rem;
+        }
       }
     }
   }

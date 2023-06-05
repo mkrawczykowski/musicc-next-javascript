@@ -7,6 +7,7 @@
     max-height: 0;
     overflow: hidden;
     transition: 0.5s max-height ease;
+    margin-top: 5.6rem;
 
     @include global.media-up(xl) {
       max-height: 9999px;
@@ -14,11 +15,13 @@
       position: relative;
       overflow: visible;
       margin: 4.1rem 0.3rem 0 0;
+      padding-bottom: 0;
     }
 
     &Active {
       max-height: 999px;
       transition: 0.5s max-height ease;
+      padding-bottom: 10rem;
     }
   }
 }
