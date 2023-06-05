@@ -1,6 +1,11 @@
 @use '../../../styles/global/' as global;
 
 .trackBox {
+  @include global.media-up(xl) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 10.1rem;
   }
@@ -13,6 +18,10 @@
     line-height: 2.2rem;
     color: global.$white;
     margin: 0 0 2.7rem 0;
+
+    @include global.media-up(xl) {
+      display: none;
+    }
   }
 
   &__description {
@@ -23,11 +32,24 @@
     line-height: 2.1rem;
     color: global.$white;
     margin: 0 0 3.3rem 0;
+
+    @include global.media-up(xl) {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      order: 2;
+      width: 45%;
+      padding: 6.4rem 9.5rem 5rem 5rem;
+    }
   }
 
   &__playerRow {
     display: flex;
     justify-content: space-between;
+
+    @include global.media-up(xl) {
+      order: 1;
+      width: 100%;
+    }
 
     .trackBox__player {
       flex: 1;
@@ -41,11 +63,23 @@
       align-items: center;
       position: relative;
 
+      @include global.media-up(xl) {
+        height: 8.8rem;
+        padding: 0 5.1rem 0 4.9rem;
+      }
+
       &Button {
         width: 1.6rem;
         height: 1.8rem;
         position: relative;
         top: -0.2rem;
+        background-repeat: no-repeat;
+
+        @include global.media-up(xl) {
+          width: 2.2rem;
+          height: 2.3rem;
+          top: 0;
+        }
 
         &Play {
           // width: 2.1rem;
@@ -62,6 +96,24 @@
 
       &Name {
         display: none;
+
+        @include global.media-up(xl) {
+          display: inline-block;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 1.6rem;
+          line-height: 1.9rem;
+          margin-left: 2.9rem;
+          margin-top: -0.2rem;
+          max-width: 18.6rem;
+          /* gradient */
+          background: linear-gradient(90.75deg, rgba(255, 0, 168, 0.6) 2.97%, rgba(189, 0, 255, 0.6) 55.95%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
       }
 
       &Seek {
@@ -73,16 +125,23 @@
         margin-left: 21.76px;
         margin-right: 11.9px;
 
+        @include global.media-up(xl) {
+          margin-right: 2rem;
+        }
+
         &Track {
           background-color: global.$warmGray;
           display: inline-block;
           width: 100%;
           height: 0.1rem;
           margin-top: 0.1rem;
+
+          @include global.media-up(xl) {
+            height: 0.3rem;
+          }
         }
 
         &Point {
-          background-color: global.$warmGray;
           display: inline-block;
           width: 1rem;
           height: 1rem;
@@ -92,6 +151,14 @@
           border-radius: 50%;
           background: linear-gradient(90.75deg, rgba(255, 0, 168, 0.5) 2.97%, rgba(189, 0, 255, 0.5) 55.95%);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+          @include global.media-up(xl) {
+            width: 1.9rem;
+            height: 1.8rem;
+            top: -0.6rem;
+            background: none;
+            background-color: global.$warmGray;
+          }
         }
       }
 
@@ -104,6 +171,12 @@
         color: global.$warmGray;
         position: relative;
         top: -0.1rem;
+
+        @include global.media-up(xl) {
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          margin-top: 0.7rem;
+        }
       }
     }
   }
@@ -115,30 +188,45 @@
     align-items: center;
     padding: 0 0.3rem;
 
+    @include global.media-up(xl) {
+      width: 11.3rem;
+      padding: 0 0.3rem 0 1.9rem;
+    }
+
     .trackBox__icon {
       position: relative;
 
       &Download {
         .trackBox__iconLink {
           background-image: url('data:image/svg+xml,<svg viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.01465 21.6216H22.7847M12.3997 14.2331V1.91895M12.3997 14.2331L17.5922 9.30746M12.3997 14.2331L7.20716 9.30746" stroke="url(%23paint0_linear_520_633)" stroke-opacity="0.6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_520_633" x1="2.50234" y1="11.7703" x2="13.649" y2="11.9246" gradientUnits="userSpaceOnUse"><stop stop-color="%23FF00A8"/><stop offset="1" stop-color="%23BD00FF"/></linearGradient></defs></svg>');
-          width: 25px;
-          height: 25px;
-          // width: 2rem;
-          // height: 1.9rem;
+          background-repeat: no-repeat;
+          width: 2.5rem;
+          height: 2.5rem;
           display: inline-block;
           position: relative;
           top: 0.1rem;
+
+          @include global.media-up(xl) {
+            width: 3.6rem;
+            height: 3rem;
+            top: 0.3rem;
+          }
         }
       }
 
       &Share {
         .trackBox__iconLink {
           background-image: url('data:image/svg+xml,<svg viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.2141 15.693C15.4159 15.693 14.7018 16.0085 14.1557 16.5026L6.66769 12.1392C6.7202 11.8974 6.76221 11.6555 6.76221 11.4032C6.76221 11.1509 6.7202 10.909 6.66769 10.6672L14.0717 6.34583C14.6388 6.87154 15.3844 7.19748 16.2141 7.19748C17.9575 7.19748 19.3647 5.78857 19.3647 4.0432C19.3647 2.29783 17.9575 0.888916 16.2141 0.888916C14.4708 0.888916 13.0635 2.29783 13.0635 4.0432C13.0635 4.29554 13.1055 4.53737 13.158 4.7792L5.754 9.10057C5.18689 8.57485 4.44124 8.24891 3.61157 8.24891C1.86822 8.24891 0.460938 9.65782 0.460938 11.4032C0.460938 13.1486 1.86822 14.5575 3.61157 14.5575C4.44124 14.5575 5.18689 14.2315 5.754 13.7058L13.2315 18.0798C13.179 18.3006 13.1475 18.5319 13.1475 18.7632C13.1475 20.456 14.5233 21.8334 16.2141 21.8334C17.9049 21.8334 19.2807 20.456 19.2807 18.7632C19.2807 17.0704 17.9049 15.693 16.2141 15.693Z" fill="url(%23paint0_linear_520_635)" fill-opacity="0.6"/><defs><linearGradient id="paint0_linear_520_635" x1="0.904811" y1="11.3611" x2="11.0504" y2="11.4814" gradientUnits="userSpaceOnUse"><stop stop-color="%23FF00A8"/><stop offset="1" stop-color="%23BD00FF"/></linearGradient></defs></svg>');
-          width: 18.9px;
-          height: 21.34px;
-          // width: 1.9rem;
-          // height: 2.2rem;
+          background-repeat: no-repeat;
+          width: 1.89rem;
+          height: 2.134rem;
           display: inline-block;
+
+          @include global.media-up(xl) {
+            width: 2.79rem;
+            height: 3.234rem;
+            margin-top: 0.8rem;
+          }
         }
       }
     }

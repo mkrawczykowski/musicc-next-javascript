@@ -59,7 +59,7 @@ $columns: (
     }
 
     @include global.media-up(xxl) {
-      grid-template-columns: 21.9rem auto;
+      grid-template-columns: 20.9rem auto;
       grid-template-rows: auto;
     }
 

@@ -108,40 +108,6 @@ const SectionTracksWithFilters = () => {
           </Col>
         </Row>
       </Container>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
-      <p>sss</p>
     </section>
   );
 }

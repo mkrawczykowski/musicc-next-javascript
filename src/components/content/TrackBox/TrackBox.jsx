@@ -24,7 +24,10 @@ const TrackBox = ({ trackName, trackShortDescription, trackTags }) => {
       <div className={style.trackBox__playerRow}>
         <div className={style.trackBox__player}>
           <button className={[style.trackBox__playerButton, style[stateClass]].join(' ')}></button>
-          <div className={style.trackBox__playerName}></div>
+          {
+            trackName ? <div className={style.trackBox__playerName}>{trackName}</div> : null
+          }
+
           <div className={style.trackBox__playerSeek}>
             <span className={style.trackBox__playerSeekTrack} />
             <span className={style.trackBox__playerSeekPoint} />

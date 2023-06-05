@@ -6,6 +6,15 @@
   margin-top: 3rem;
   gap: 1.3rem 2.2rem;
 
+  @include global.media-up(xl) {
+    order: 3;
+    width: 55%;
+    margin-top: 0;
+    padding: 6.2rem 12rem 2rem 3.8rem;
+    gap: 1rem;
+    align-content: flex-start;
+  }
+
   &__taxonomy {
     &Link {
       color: global.$white;
@@ -14,6 +23,11 @@
       font-weight: 400;
       font-size: 1.4rem;
       line-height: 2.1rem;
+
+      @include global.media-up(xl) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+      }
     }
   }
 }
